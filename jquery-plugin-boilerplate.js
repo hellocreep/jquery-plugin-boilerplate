@@ -27,10 +27,10 @@
 	$.fn.plugin = function(opts) {
 		return this.each(function() {
 			var $this = $(this),
-				data = $this.data('popover'),
+				data = $this.data('plugin'),
 				conf = $.extend({}, Plugin.DEFAULTS, typeof opts === 'object' && opts);
 			
-			if (!data) $this.data('popover', (data = new Plugin(this, conf)));
+			if (!data) $this.data('plugin', (data = new Plugin(this, conf)));
 			if (typeof option == 'string') data[option]();
 		});
 	}
